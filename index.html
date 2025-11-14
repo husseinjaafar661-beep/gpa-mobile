@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>حاسبة المعدل - Mobile App Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>حاسبة المعدل (GPA)</h1>
+      <p class="subtitle">أدخل المواد، الساعات، والدرجات لتحصل على المعدل فوراً</p>
+    </header>
+
+    <main class="app-body">
+      <div id="courses" class="courses-list"></div>
+
+      <div class="controls">
+        <button id="add-course" class="btn primary">إضافة مادة</button>
+        <button id="clear-all" class="btn danger">مسح الكل</button>
+      </div>
+
+      <div class="result-card">
+        <div class="result-row">
+          <div>
+            <div class="label">المعدل الكلي</div>
+            <div id="gpa" class="big-number">0.00</div>
+          </div>
+          <div>
+            <div class="label">إجمالي الساعات</div>
+            <div id="total-credits" class="small-number">0</div>
+          </div>
+        </div>
+        <div class="hint">تغيّر القيم لتحديث المعدل تلقائياً</div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <small>نسخة موبايل ستايل • بدون مكتبات • محفوظة محلياً</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

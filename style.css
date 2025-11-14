@@ -1,0 +1,108 @@
+:root{
+  --bg:#f2f6fb;
+  --card:#ffffff;
+  --primary:#0b84ff;
+  --text:#222;
+  --muted:#6b7280;
+  --danger:#ff4d4d;
+  --radius:14px;
+  --gap:12px;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* Reset بسيط */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.app{max-width:420px;margin:20px auto;padding:12px}
+
+/* Header */
+.app-header{background:linear-gradient(180deg,#0b84ff11,#ffffff00);padding:18px;border-radius:12px 12px 10px 10px;text-align:center}
+.app-header h1{margin:0;font-size:20px}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+/* Courses list card style */
+.courses-list{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+
+/* كل مادة */
+.course{
+  background:var(--card);
+  border-radius:12px;
+  padding:10px;
+  display:grid;
+  grid-template-columns: 1fr 80px 80px 90px;
+  gap:8px;
+  align-items:center;
+  box-shadow:0 6px 18px rgba(11,132,255,0.04);
+}
+
+.course .course-name{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #e6eefb;
+  background:#fbfdff;
+  font-size:14px;
+}
+/* selects */
+.course select{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #e6eefb;
+  background:#fff;
+  appearance:none;
+  font-size:14px;
+}
+
+/* نقاط المادة */
+.course .course-gpa{
+  display:block;
+  font-weight:700;
+  font-size:14px;
+  text-align:center;
+  color:var(--text);
+}
+
+/* زر الحذف */
+.btn{display:inline-block;padding:10px 12px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+.btn.primary{background:var(--primary);color:#fff;width:100%}
+.btn.danger{background:var(--danger);color:#fff;width:100%}
+
+/* أزرار داخل الكورس (نخلي حذف بنفس ستايل صغير) */
+.delete-btn{
+  background:transparent;
+  border:1px solid #ffdede;
+  color:var(--danger);
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* Controls row */
+.controls{display:flex;gap:10px;margin-top:12px}
+
+/* Result card */
+.result-card{
+  margin-top:16px;
+  background:var(--card);
+  padding:14px;border-radius:12px;
+  box-shadow:0 6px 18px rgba(11,132,255,0.04);
+}
+.result-row{display:flex;justify-content:space-between;align-items:center}
+.label{color:var(--muted);font-size:13px}
+.big-number{font-size:28px;font-weight:800}
+.small-number{font-size:18px;font-weight:700;color:var(--muted)}
+.hint{margin-top:10px;color:var(--muted);font-size:13px}
+
+/* Footer */
+.app-footer{text-align:center;margin-top:12px;color:var(--muted);font-size:12px}
+
+/* Responsive: شاشة ضيقة */
+@media (max-width:420px){
+  .app{padding:10px;margin:8px}
+  .course{grid-template-columns:1fr 80px 80px 90px}
+  .course .course-name{font-size:14px}
+  .controls{flex-direction:column}
+  .btn{padding:12px;font-size:16px}
+}
